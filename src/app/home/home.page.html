@@ -1,0 +1,51 @@
+<ion-content>
+<ion-grid>
+  <ion-row style="background-color: rgb(255, 255, 255); border-radius:20px; "> 
+    <div class="col-3">
+      <ion-img src="../assets/icon/logo_kkh.jpg" style="width:200px;height: 200px; margin-left: 40%;"></ion-img>
+    </div>
+    <div class="col-6">
+      <h1 style="color: rgb(55, 46, 170); font-size: 50px; text-align: center;">หมายเลขรับยา</h1>
+      <h2 style="color: rgb(0, 0, 0); font-size: 30px; text-align: center;">{{day}}&nbsp;{{days}}&nbsp;{{month}}&nbsp;เวลา&nbsp;{{ today | date: 'HH:mm' }}</h2>
+    </div>
+    <div class="col-3"> 
+        <ion-img src="../assets/icon/logo_p_kkh.jpg" style="width:150px; height: 200px; "></ion-img>     
+    </div>
+  </ion-row>
+  <ion-row>
+
+    <ion-col >
+      <ion-card style="color: white;  text-align: center; width: auto; height:450px;border-radius:20px;background-color:{{color1}}">
+        <h1 style="font-size: 50px;">ช่องที่1</h1> 
+         <h1 *ngFor="let item1 of slot1" style="font-weight:bold; margin-top: 1%; margin-left: 10%; margin-right: 10%; border-radius: 15px; font-size:65px;color:{{fontcolor}}; background-color: {{boxcolor}};">{{item1.internal_que}}</h1>
+       
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card style="color: white;  text-align: center; width: auto; height:450px;border-radius:20px;background-color:{{color2}}">
+             <h1 style="font-size: 50px;">ช่องที่2</h1> 
+             <h2 *ngFor="let item2 of slot2" style="font-weight:bold; margin-top: 1%; margin-left: 10%; margin-right: 10%; border-radius: 15px; font-size:65px;color:{{fontcolor}}; background-color: {{boxcolor}};">{{item2.internal_que}}</h2>
+      </ion-card>
+    </ion-col>
+    <ion-col >
+     <ion-card style="color: white;  text-align: center; width: auto; height:450px;border-radius:20px;background-color: {{color3}}">
+       <h1 style="font-size: 50px;">ช่องที่3</h1>
+      <h2 *ngFor="let item3 of slot3" style="font-weight:bold; margin-top: 1%; margin-left: 10%; margin-right: 10%; border-radius: 15px;font-size:65px;color:{{fontcolor}}; background-color: {{boxcolor}};">{{item3.internal_que}}</h2>
+     </ion-card>
+    </ion-col>
+    <ion-col >
+      <ion-card style="color: white; text-align: center; width: auto; height:450px; border-radius:20px;background-color:{{color4}}">
+        <h1 style="font-size: 50px;">ช่องที่4</h1>
+       <h2 *ngFor="let item4 of slot4" style="font-weight:bold; margin-top: 1%; margin-left: 10%; margin-right: 10%; border-radius: 15px;font-size:65px;color:{{fontcolor}}; background-color: {{boxcolor}};">{{item4.internal_que}}</h2>
+      </ion-card>
+    </ion-col>
+    <ion-col >
+      <ion-card style="color: white; text-align: center;width: auto; height:450px; border-radius:20px;background-color:{{color5}}">
+        <h1 style="font-size: 50px;">ช่องที่5</h1>
+        
+           <h2 *ngFor="let item5 of slot5" style="font-weight:bold; margin-top: 1%; margin-left: 10%; margin-right: 10%; border-radius: 15px;font-size:65px;color:{{fontcolor}}; background-color: {{boxcolor}};">{{item5.internal_que}}</h2>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content> 
